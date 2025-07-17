@@ -1,0 +1,8 @@
+playwright
+asyncio
+fastapi uvicorn
+python-dotenv 
+pydantic
+jinja2
+
+# need to run syntax: playwright install on terminal
