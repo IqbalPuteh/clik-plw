@@ -21,9 +21,6 @@ A robust automation service using Playwright and FastAPI to simulate user workfl
 
 - Python 3.10+  
 - Playwright with Chromium installed  
-  ```bash
-  playwright install
-  ```  
 - FastAPI  
 - Uvicorn  
 - Tenacity  
@@ -83,6 +80,7 @@ uvicorn api_main:app --reload
 
 ## Project Structure
 
+```plaintext
 Credit-Bureau-Nusantara---Playwright/
 ├─ .vscode/                     # Editor settings and launch configurations
 ├─ code_backup/                # Archived or legacy code for reference
@@ -95,9 +93,8 @@ Credit-Bureau-Nusantara---Playwright/
 ├─ config_helper.py            # Helper functions for reading and applying config
 ├─ requirement.txt             # Python dependency list
 
-
 ---
-
+```
 ## Logging
 
 Logs include:
@@ -124,6 +121,12 @@ Log format is compatible with `TextWriterTraceListener` style or JSON lines.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for full terms.
+
+---
+
+### You can see a script in recorded action 
+
+https://github.com/user-attachments/assets/91cab32c-8654-4303-bf8a-5fac24fed5bb
 
 ---
 
