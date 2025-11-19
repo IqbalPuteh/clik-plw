@@ -4,13 +4,13 @@ from playwright.async_api import Playwright, async_playwright, expect
 
 
 async def run(playwright: Playwright) -> None:
-    browser = await playwright.chromium.launch(headless=True)
+    browser = await playwright.chromium.launch(headless=False)
     userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
-    context = await browser.new_context(user_agent=userAgent, bypass_csp=True)
+    context = await browser.new_context()
     page = await context.new_page()
-    await page.goto("https://cbsnusantara.cbclik.com/Account/Login")
-    await page.get_by_role("textbox", name="Username").fill("NEFO4081")
-    await page.get_by_role("textbox", name="Password").fill("Ptfti2025")
+    await page.goto("https://uat-web.cbclik.com/Account/Login")
+    await page.get_by_role("textbox", name="Username").fill("NARE5697")
+    await page.get_by_role("textbox", name="Password").fill("Testing01@")
     await page.wait_for_load_state("networkidle")
     await page.get_by_role("button", name="Login").click()
     await page.get_by_role("link", name="Company").nth(2).click()
